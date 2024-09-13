@@ -4,7 +4,8 @@ import subprocess
 class TestTranslator(unittest.TestCase):
     def test_output(self):
         # Command to run translator.py script
-        command = ["python3", "translator.py", "Abc", "123", "xYz"]
+        #I needed to change to python from python3 as my powershell was not recognizing python3
+        command = ["python", "translator.py", "Abc", "123", "xYz"]
         
         # Run the command and capture output
         result = subprocess.run(command, capture_output=True, text=True)
